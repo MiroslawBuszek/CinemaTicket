@@ -1,4 +1,7 @@
 package com.mbuszek.enums;
 
-public class TicketStatus {
+public enum TicketStatus {
+    FULLYCONFIRMED,
+    WAITINGFORPAYMENT,
+    CANCELED
 }

@@ -1,4 +1,9 @@
 package com.mbuszek.enums;
 
-public class City {
+public enum City {
+    WARSZAWA,
+    WROCLAW,
+    KRAKOW,
+    RZESZOW,
+    KATOWICE
 }

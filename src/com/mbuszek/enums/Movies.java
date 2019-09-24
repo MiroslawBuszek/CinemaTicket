@@ -1,4 +1,8 @@
 package com.mbuszek.enums;
 
-public class Movies {
+public enum Movies {
+    MATRIX,
+    RAMBO,
+    DAREDEVIL,
+    SOLARIS
 }

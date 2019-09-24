@@ -1,4 +1,7 @@
 package com.mbuszek.enums;
 
-public class PlaceStatus {
+public enum PlaceStatus {
+    FREE,
+    RESERVED,
+    OCCUPIED
 }
