@@ -1,4 +1,4 @@
-package com.mbuszek;
+package com.mbuszek.main;
 
 public class Main {
 
