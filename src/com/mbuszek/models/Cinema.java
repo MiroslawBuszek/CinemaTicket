@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Cinema {
 
     private City city;
-    private List<Seans> seansList = new ArrayList<>();
+    private List<Screening> screeningList = new ArrayList<>();
 
     public Cinema(City city) {
         this.city = city;
@@ -26,19 +26,19 @@ public class Cinema {
         return this;
     }
 
-    public List<Seans> getSeansList() {
-        return seansList;
+    public List<Screening> getScreeningList() {
+        return screeningList;
     }
 
-    public Cinema setSeansList(List<Seans> seansList) {
-        this.seansList = seansList;
+    public Cinema setScreeningList(List<Screening> screeningList) {
+        this.screeningList = screeningList;
         return this;
     }
 
-    public Seans addSeans(Movies movie, LocalDateTime startTime, int capacity) {
-        Seans seans = new Seans(movie, startTime, capacity);
-        seansList.add(seans);
-        return seans;
+    public Screening addSeans(Movies movie, LocalDateTime startTime, int capacity) {
+        Screening screening = new Screening(movie, startTime, capacity);
+        screeningList.add(screening);
+        return screening;
     }
 
     @Override
@@ -47,16 +47,16 @@ public class Cinema {
         if (o == null || getClass() != o.getClass()) return false;
         Cinema cinema = (Cinema) o;
         return city == cinema.city &&
-                Objects.equals(seansList, cinema.seansList);
+                Objects.equals(screeningList, cinema.screeningList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(city, seansList);
+        return Objects.hash(city, screeningList);
     }
 
     @Override
     public String toString() {
-        return "Cinema{" + "city = " + city + ", seansList = " + seansList + '}';
+        return "Cinema{" + "city = " + city + ", screeningList = " + screeningList + '}';
     }
 }
