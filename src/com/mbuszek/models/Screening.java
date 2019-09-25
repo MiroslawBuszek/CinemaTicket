@@ -1,6 +1,7 @@
 package com.mbuszek.models;
 
 import com.mbuszek.enums.Movies;
+import com.mbuszek.enums.PlaceStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Screening {
     public Screening(Movies movie, LocalDateTime startTime, int capacity) {
         this.movie = movie;
         this.startTime = startTime;
+        addPlaces(capacity);
     }
 
     public Movies getMovie() {
@@ -44,6 +46,22 @@ public class Screening {
         return this;
     }
 
+    public void addPlaces(int capacity) {
+        for (int i = 0; i < capacity; i++) {
+            Place place = new Place(i, null, PlaceStatus.FREE);
+            placesList.add(place);
+        }
+    }
+
+    public Place findPlace(int placeId) {
+        for (Place place : placesList) {
+            if (place.getPlaceID() == placeId) {
+                return place;
+            }
+        }
+
+        return null;
+    }
 
     public List<Place> getPlacesList() {
         return placesList;
