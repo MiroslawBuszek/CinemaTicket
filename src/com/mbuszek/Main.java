@@ -17,7 +17,7 @@ public class Main {
         Cinemas cinemaSystem = new Cinemas();
 
         Cinema warsaw = cinemaSystem.addCinema(City.WARSZAWA);
-        Screening screening = warsaw.addSeans(Movies.MATRIX, LocalDateTime.of(2019, 10, 12, 15, 30), 10);
+        Screening screening = warsaw.addScreening(Movies.MATRIX, LocalDateTime.of(2019, 10, 12, 15, 30), 10);
 
         Order order = new Order(cinemaSystem);
         order.buyTicket(screening, false, 0);

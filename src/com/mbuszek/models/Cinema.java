@@ -35,7 +35,7 @@ public class Cinema {
         return this;
     }
 
-    public Screening addSeans(Movies movie, LocalDateTime startTime, int capacity) {
+    public Screening addScreening(Movies movie, LocalDateTime startTime, int capacity) {
         Screening screening = new Screening(movie, startTime, capacity);
         screeningList.add(screening);
         return screening;
