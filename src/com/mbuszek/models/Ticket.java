@@ -63,9 +63,8 @@ public class Ticket {
         return ticketStatus;
     }
 
-    public Ticket setTicketStatus(TicketStatus ticketStatus) {
+    public void setTicketStatus(TicketStatus ticketStatus) {
         this.ticketStatus = ticketStatus;
-        return this;
     }
 
     @Override

@@ -8,13 +8,13 @@ public class Place {
     private Ticket ticket;
     private PlaceStatus placeStatus = PlaceStatus.FREE;
 
-    public Place(int placeID, Ticket ticket, PlaceStatus placeStatus) {
+    Place(int placeID, Ticket ticket, PlaceStatus placeStatus) {
         this.placeID = placeID;
         this.ticket = ticket;
         this.placeStatus = placeStatus;
     }
 
-    public int getPlaceID() {
+    int getPlaceID() {
         return placeID;
     }
 
@@ -27,18 +27,16 @@ public class Place {
         return ticket;
     }
 
-    public Place setTicket(Ticket ticket) {
+    public void setTicket(Ticket ticket) {
         this.ticket = ticket;
-        return this;
     }
 
     public PlaceStatus getPlaceStatus() {
         return placeStatus;
     }
 
-    public Place setPlaceStatus(PlaceStatus placeStatus) {
+    public void setPlaceStatus(PlaceStatus placeStatus) {
         this.placeStatus = placeStatus;
-        return this;
     }
 
     @Override

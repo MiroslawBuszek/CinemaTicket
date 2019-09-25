@@ -13,7 +13,7 @@ public class Screening {
     private LocalDateTime startTime;
     private List<Place> placesList = new ArrayList<>();
 
-    public Screening(Movies movie, LocalDateTime startTime, int capacity) {
+    Screening(Movies movie, LocalDateTime startTime, int capacity) {
         this.movie = movie;
         this.startTime = startTime;
         addPlaces(capacity);
@@ -46,7 +46,7 @@ public class Screening {
         return this;
     }
 
-    public void addPlaces(int capacity) {
+    private void addPlaces(int capacity) {
         for (int i = 0; i < capacity; i++) {
             Place place = new Place(i, null, PlaceStatus.FREE);
             placesList.add(place);

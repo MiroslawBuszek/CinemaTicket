@@ -13,7 +13,7 @@ public class Cinema {
     private City city;
     private List<Screening> screeningList = new ArrayList<>();
 
-    public Cinema(City city) {
+    Cinema(City city) {
         this.city = city;
     }
 

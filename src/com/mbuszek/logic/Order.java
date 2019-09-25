@@ -16,7 +16,7 @@ public class Order {
         this.cinemaSystem = cinemaSystem;
     }
 
-    public Ticket buyTicket(Screening screening, boolean normalPrice, int placeId) {
+    public void buyTicket(Screening screening, boolean normalPrice, int placeId) {
 
         Place place = screening.findPlace(placeId);
         if (place == null || place.getPlaceStatus() != PlaceStatus.FREE) {
@@ -27,12 +27,10 @@ public class Order {
 
         TicketStatus ticketStatus = TicketStatus.WAITINGFORPAYMENT;
 
-
-        if (normalPrice == true) {
+        if (normalPrice) {
             price = 30;
         } else {
             price = 15;
-
         }
 
         Ticket ticket = new Ticket(price, normalPrice, place, Movies.MATRIX, TicketStatus.WAITINGFORPAYMENT);
@@ -42,24 +40,19 @@ public class Order {
 
         System.out.println(ticket);
 
-        return ticket;
     }
 
-    public Ticket orderConfirmation(Screening screening, int placeId) {
+    public void orderConfirmation(Screening screening, int placeId) {
         Place place = screening.findPlace(placeId);
         place.setPlaceStatus(PlaceStatus.OCCUPIED);
         Ticket ticket = place.getTicket();
         ticket.setTicketStatus(TicketStatus.FULLYCONFIRMED);
-
-        return ticket;
     }
 
-    public Ticket orderCancel(Screening screening, int placeId) {
+    public void orderCancel(Screening screening, int placeId) {
         Place place = screening.findPlace(placeId);
         place.setPlaceStatus(PlaceStatus.FREE);
         Ticket ticket = place.getTicket();
         ticket.setTicketStatus(TicketStatus.CANCELED);
-
-        return ticket;
     }
 }
