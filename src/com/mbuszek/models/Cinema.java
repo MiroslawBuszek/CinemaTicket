@@ -1,7 +1,7 @@
 package com.mbuszek.models;
 
-import com.mbuszek.enums.City;
-import com.mbuszek.enums.Movies;
+import com.mbuszek.models.enums.City;
+import com.mbuszek.models.enums.Movies;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -39,20 +39,6 @@ public class Cinema {
         Screening screening = new Screening(movie, startTime, capacity);
         screeningList.add(screening);
         return screening;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cinema cinema = (Cinema) o;
-        return city == cinema.city &&
-                Objects.equals(screeningList, cinema.screeningList);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(city, screeningList);
     }
 
     @Override
