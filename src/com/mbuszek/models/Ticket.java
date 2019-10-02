@@ -1,7 +1,7 @@
 package com.mbuszek.models;
 
-import com.mbuszek.enums.Movies;
-import com.mbuszek.enums.TicketStatus;
+import com.mbuszek.models.enums.Movies;
+import com.mbuszek.models.enums.TicketStatus;
 
 import java.util.Objects;
 
@@ -67,22 +67,6 @@ public class Ticket {
         this.ticketStatus = ticketStatus;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Ticket ticket = (Ticket) o;
-        return Double.compare(ticket.price, price) == 0 &&
-                normalPrice == ticket.normalPrice &&
-                Objects.equals(place, ticket.place) &&
-                movie == ticket.movie &&
-                ticketStatus == ticket.ticketStatus;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(price, normalPrice, place, movie, ticketStatus);
-    }
 
     @Override
     public String toString() {
