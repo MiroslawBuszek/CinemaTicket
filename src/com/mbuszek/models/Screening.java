@@ -1,7 +1,7 @@
 package com.mbuszek.models;
 
-import com.mbuszek.enums.Movies;
-import com.mbuszek.enums.PlaceStatus;
+import com.mbuszek.models.enums.Movies;
+import com.mbuszek.models.enums.PlaceStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
