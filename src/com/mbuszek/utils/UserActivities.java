@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserActivities {
 
-    public void userActivities() {
+    public static void userActivities() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select an option");
