@@ -67,7 +67,6 @@ public class Ticket {
         this.ticketStatus = ticketStatus;
     }
 
-
     @Override
     public String toString() {
         return "Ticket{" +
