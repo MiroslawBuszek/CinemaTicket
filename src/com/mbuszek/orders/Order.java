@@ -1,8 +1,8 @@
-package com.mbuszek.logic;
+package com.mbuszek.orders;
 
-import com.mbuszek.enums.Movies;
-import com.mbuszek.enums.PlaceStatus;
-import com.mbuszek.enums.TicketStatus;
+import com.mbuszek.models.enums.Movies;
+import com.mbuszek.models.enums.PlaceStatus;
+import com.mbuszek.models.enums.TicketStatus;
 import com.mbuszek.models.Cinemas;
 import com.mbuszek.models.Place;
 import com.mbuszek.models.Screening;
