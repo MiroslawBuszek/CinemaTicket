@@ -1,8 +1,8 @@
 package com.mbuszek;
 
-import com.mbuszek.enums.City;
-import com.mbuszek.enums.Movies;
-import com.mbuszek.logic.Order;
+import com.mbuszek.models.enums.City;
+import com.mbuszek.models.enums.Movies;
+import com.mbuszek.orders.Order;
 import com.mbuszek.models.Cinema;
 import com.mbuszek.models.Cinemas;
 import com.mbuszek.models.Screening;
