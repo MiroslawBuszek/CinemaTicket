@@ -35,8 +35,7 @@ public class Main {
         System.out.println();
         System.out.println(screening);
         System.out.println();
-        UserActivities userAct = new UserActivities();
-        userAct.userActivities();
 
+        UserActivities.userActivities();
     }
 }
